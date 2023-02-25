@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 
 import Header from '../components/header';
+import { CardCommon, CardService } from '../components/cards';
+import Connection from '../components/connection';
 
 export default function Home() {
   return (
@@ -10,17 +12,16 @@ export default function Home() {
       <Head>
         <title>гостевой дом Анита</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='гостевой дом Анита в Сочи Лазаревском. Интерьеры номеров на 2-3-х человек' />
       </Head>
 
+      <Header />
       <main>
-        <Header />
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <CardCommon />
+        <h1 className={styles.order}><span>Бронировать</span></h1>
+        <Connection />
+        <CardService />
 
         <div className={styles.grid}>
           <Link href="./photoes" className={styles.card}>
@@ -33,26 +34,16 @@ export default function Home() {
             <p>Цены на услуги гостиничного дома</p>
           </Link>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://shurekov.ru"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Создано{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          <span className={styles.logo}>Создано Сергей Шуреков</span>
         </a>
       </footer>
 
@@ -92,7 +83,7 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
+      {/* <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -104,7 +95,7 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
-      `}</style>
+      `}</style> */}
     </div>
   )
 }
