@@ -18,7 +18,7 @@
   border-radius: 4px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   overflow: hidden;
-  max-width: 85%;
+  width: 100%;
 }
 
 .card_content {
@@ -34,17 +34,14 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  max-width: 230px;
+  max-width: 40rem;
   padding: 1rem;
 }
 
-.card_content h3 {
-  font-size: small;
-}
-
 .crd_head {
-  font-size: x-large;
+  font-size: 30px;
   font-weight: 700;
+  margin: 0.5em auto;
 }
 
 .crd_txt {
